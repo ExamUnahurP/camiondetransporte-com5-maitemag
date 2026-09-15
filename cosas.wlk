@@ -69,7 +69,11 @@ object contenedorPortuario{
         cosas.add(unaCosa)
     }
 
-    method sacarCosa()
+    method sacarCosa(unaCosa){
+        cosas.remove(unaCosa)
+    }
+
+    method peligro() = if (cosas.size() == 0) 0 else cosas.sum({a=> a.peligro()})
 }
 
 object residuosRadiactivos{
@@ -88,6 +92,10 @@ object embalajeDeSeguridad{
     var cosa = residuosRadiactivos
     method peso(){
         return cosa.peso()
+    }
+
+    method peligro(){
+        return cosa.peligro()/2
     }
 
     method cambiarCosa(unaCosa){
