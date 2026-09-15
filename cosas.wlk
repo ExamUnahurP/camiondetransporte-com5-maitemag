@@ -24,14 +24,6 @@ object bumblebee{
     
 }
 
-object auto{
-    method peligro() = 15
-}
-
-object robot{
-    method peligro() = 30
-}
-
 object paqueteDeLadrillos{
     var cantidadLadrillos = 1
 
@@ -54,7 +46,12 @@ object arenaAGranel{
 }
 
 object bateriaAntiaerea{
-    var peso 
+  var tieneMisil = true
+
+    method peligro() = if(tieneMisil) 100, else 300
+
+    method 
+
 }
 
 
