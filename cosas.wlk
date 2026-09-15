@@ -10,14 +10,38 @@ object bumblebee{
     var transformacion = auto
     method peso(){
         return 800
-        +
-    }
-    method peligro(){
-        if transformacion == auto:
-        return 15
-        else:
         
-
     }
-    method
+
+    method peligro()= transformacion.peligro()
+
+    method transformar(tipo){
+        transformacion = tipo
+    }
+
+
+    
 }
+
+object auto{
+    method peligro() = 15
+}
+
+object robot{
+    method peligro() = 30
+}
+
+object paqueteDeLadrillos{
+    var cantidadLadrillos = 0
+
+    method peso(){
+        return 2*cantidadLadrillos
+    }
+
+    method peligro()= 2
+}
+
+object arenaAGranel{
+    var 
+}
+   
