@@ -73,10 +73,10 @@ object contenedorPortuario{
         cosas.remove(unaCosa)
     }
 
-    method peligro() = if (cosas.size() == 0) 0 else cosas.sum({a=> a.peligro()})
+    method peligro() = if (cosas.isEmpty()) 0 else cosas.max({a=> a.peligro()}).peligro()
 }
 
-object residuosRadiactivos{
+object residuosRadioactivos{
     method peligro() = 200
 
     var peso = 1
