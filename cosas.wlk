@@ -48,10 +48,20 @@ object arenaAGranel{
 object bateriaAntiaerea{
   var tieneMisil = true
 
-    method peligro() = if(tieneMisil) 100, else 300
+    method peligro() = if(tieneMisil) 100 else 0
 
-    method 
+    method peso() = if(tieneMisil) 300 else 200
 
+    method cambiarMisil() {
+
+        tieneMisil = !tieneMisil
+    }
+}
+
+object contenedorPortuario{
+    const cosas = [bateriaAntiaerea]
+
+    method peso() = 100 + cosas.sum({a => a.peso()})
 }
 
 
