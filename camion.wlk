@@ -1,4 +1,4 @@
-object camion {
+/*object camion {
     method peso(){
         return 1000 + 
     }
@@ -9,7 +9,7 @@ object camion {
 
     }
     method descargar(){
-        
+
     }
 
-}
+}*/
