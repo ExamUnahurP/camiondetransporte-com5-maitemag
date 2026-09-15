@@ -59,11 +59,17 @@ object bateriaAntiaerea{
 }
 
 object contenedorPortuario{
-    const cosas = []
+   const cosas = []
 
     method peso() {
      return 100 + cosas.sum({a => a.peso()})
     }
+
+    method agregarCosa(unaCosa){
+        cosas.add(unaCosa)
+    }
+
+    method sacarCosa()
 }
 
 object residuosRadiactivos{
@@ -78,12 +84,15 @@ object residuosRadiactivos{
     }
 }
 
-object embalajeDeSeguridad(){
-    
+object embalajeDeSeguridad{
+    var cosa = residuosRadiactivos
+    method peso(){
+        return cosa.peso()
+    }
+
+    method cambiarCosa(unaCosa){
+        cosa = unaCosa
+    }
 }
 
 
-
-
-
- 
