@@ -5,6 +5,11 @@ object camion {
     method estaExcedido(){
         return self.peso() > 2500
     }
-    method 
+    method cargar(){
+
+    }
+    method descargar(){
+        
+    }
 
 }
