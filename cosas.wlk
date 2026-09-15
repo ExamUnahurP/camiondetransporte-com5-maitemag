@@ -1,4 +1,4 @@
-/*object knightRider{
+object knightRider{
     method peso(){
         return 500
     }
@@ -57,14 +57,14 @@ object bateriaAntiaerea{
         tieneMisil = !tieneMisil
     }
 }
-*/
+
 object contenedorPortuario{
     const cosas = []
 
     method peso() = 100 + cosas.sum({a => a.peso()})
 }
 
-/*object residuosRadiactivos{
+object residuosRadiactivos{
     method peligro() = 200
 
     var peso = 1
@@ -77,10 +77,10 @@ object contenedorPortuario{
 }
 
 object embalajeDeSeguridad(){
-
+    
 }
 
-*/
+
 
 
 
