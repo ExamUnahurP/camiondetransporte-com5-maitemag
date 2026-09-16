@@ -61,7 +61,7 @@ object bateriaAntiaerea{
 object contenedorPortuario{
    const cosas = []
 
-    method peso() {
+   method peso() {
      return 100 + cosas.sum({a => a.peso()})
     }
 
@@ -71,6 +71,9 @@ object contenedorPortuario{
 
     method sacarCosa(unaCosa){
         cosas.remove(unaCosa)
+    }
+    method vaciarContenedor(){
+        cosas.clear()
     }
 
     method peligro() = if (cosas.isEmpty()) 0 else cosas.max({a=> a.peligro()}).peligro()
